@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+
+//Proyect with React Redux
 import './App.css';
+import Formulario from '../src/components/Formulario';
+import store from './store/store'
+import { Provider } from 'react-redux';
 
 function App() {
+ 
   return (
+    
+    <Provider store={store}>
+      {/*Provider connect the store with the app*/}
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <header className="App-header">
+          <h1>Formulario Redux</h1>
+        </header>
+        <Formulario className="App-body" />
+        
     </div>
+    </Provider>
   );
+
 }
 
-export default App;
+export default App
